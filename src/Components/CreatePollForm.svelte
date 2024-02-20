@@ -1,5 +1,7 @@
 
 <script>
+	import Button from "../Shared/Button.svelte";
+
     let fields  = {question: '', answerA: '', answerB: ''}
 
     const submitHandler = () =>{
@@ -8,6 +10,7 @@
 
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <form on:click|preventDefault={submitHandler}>
 
     <div class="form-field">    
@@ -22,8 +25,10 @@
         <label for="answer-b">Poll Question B:</label>
         <input type="text" id="answer-b" required bind:value={fields.answerB}>
     </div>
-    <button>Add Poll</button>
-    
+    <Button>
+        
+
+    </Button>  
 
 
 </form>
@@ -54,13 +59,4 @@
         border-radius: 6px;
     }
 
-    button{
-        background-color: rgb(58, 135, 84);
-        border-radius: 10px;
-        width: 200px;
-    }
-
-    button:hover{
-        background-color: white;
-    }
 </style>
