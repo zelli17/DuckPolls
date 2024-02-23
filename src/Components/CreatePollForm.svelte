@@ -25,8 +25,8 @@
         <label for="answer-b">Poll Question B:</label>
         <input type="text" id="answer-b" required bind:value={fields.answerB}>
     </div>
-    <Button>
-        
+    <Button type="primary" flat={true}>
+        Add poll
 
     </Button>  
 
